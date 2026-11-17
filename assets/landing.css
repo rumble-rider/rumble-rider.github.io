@@ -1,0 +1,32 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  min-height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  padding: 32px 16px;
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: #fff;
+  background: #2b6fd6 url("bg.png") center / cover no-repeat fixed;
+}
+body::before {
+  content: ""; position: fixed; inset: 0;
+  background: rgba(8, 20, 48, 0.45);
+  pointer-events: none;
+}
+main { position: relative; width: 100%; max-width: 420px; text-align: center; }
+.logo { display: block; width: 100%; max-width: 360px; height: auto; margin: 0 auto 6px; }
+.ko { margin: 0 0 4px; font-size: 1.05rem; font-weight: 600; letter-spacing: 0.02em; opacity: 0.95; }
+.free { margin: 0 0 24px; font-size: 0.95rem; opacity: 0.85; }
+.stores { display: flex; flex-direction: column; gap: 12px; }
+.store {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  height: 56px; border-radius: 14px;
+  background: #fff; color: #10131a; text-decoration: none;
+  font-weight: 700; font-size: 1.05rem;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+.store:active { transform: translateY(2px); box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); }
+.store svg { width: 22px; height: 22px; flex: none; }
+.icon { width: 72px; height: 72px; border-radius: 18px; margin: 24px auto 0; display: block; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35); }
+@media (min-width: 560px) { .stores { flex-direction: row; } .store { flex: 1; } }
